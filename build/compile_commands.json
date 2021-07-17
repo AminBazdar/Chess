@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/Users/aminbazdar/Desktop/Chess/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/main.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/main.cpp",
+  "file": "/Users/aminbazdar/Desktop/Chess/src/main.cpp"
+},
+{
+  "directory": "/Users/aminbazdar/Desktop/Chess/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/chessman.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/chessman.cpp",
+  "file": "/Users/aminbazdar/Desktop/Chess/src/chessman.cpp"
+}
+]

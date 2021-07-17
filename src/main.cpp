@@ -1,10 +1,11 @@
 #include <iostream>
+#include "chessman.hpp"
 
 using namespace std;
 
 int main()
 {
-    cout << "hi" << endl;
+    //...
     
     return 0;
 }

@@ -129,6 +129,30 @@ exe/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/build
 .PHONY : exe/fast
 
+src/chessman.o: src/chessman.cpp.o
+.PHONY : src/chessman.o
+
+# target to build an object file
+src/chessman.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/chessman.cpp.o
+.PHONY : src/chessman.cpp.o
+
+src/chessman.i: src/chessman.cpp.i
+.PHONY : src/chessman.i
+
+# target to preprocess a source file
+src/chessman.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/chessman.cpp.i
+.PHONY : src/chessman.cpp.i
+
+src/chessman.s: src/chessman.cpp.s
+.PHONY : src/chessman.s
+
+# target to generate assembly for a file
+src/chessman.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/chessman.cpp.s
+.PHONY : src/chessman.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -162,6 +186,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... exe"
+	@echo "... src/chessman.o"
+	@echo "... src/chessman.i"
+	@echo "... src/chessman.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
