@@ -7,7 +7,7 @@
 class Knight : public Chessman
 {
 public:
-    Knight(Chessman::colorـ); //constructor
+    Knight(Chessman::color_); //constructor
     bool cell_access(const std::string&, const std::string&, std::array<std::array<Cell, 8>, 8> &);
 
 };

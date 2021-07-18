@@ -2,6 +2,7 @@
 #define _CHESSMAN
 
 #include <iostream>
+#include <array>
 #include "cell.hpp"
 
 using Position = std::string;
@@ -9,15 +10,15 @@ using Position = std::string;
 class Chessman
 {
 public:
-    enum class colorـ {Withe, Black};
-    Chessman(Chessman::colorـ, std::string); //cosntructor
+    enum class color_ {Withe, Black};
+    Chessman(Chessman::color_, std::string); //cosntructor
     virtual ~Chessman() {} // destructor
 
     void set_position(Position);
     Position get_position();
     
-    void set_color(Chessman::colorـ);
-    Chessman::colorـ get_color();
+    void set_color(Chessman::color_);
+    Chessman::color_ get_color();
 
     void set_symbol(std::string);
     std::string get_symbol();
@@ -26,7 +27,7 @@ public:
 
 private:
     Position position; //piece position
-    Chessman::colorـ color; //piece color
+    Chessman::color_ color; //piece color
     std::string symbol;
 };
 

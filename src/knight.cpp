@@ -5,7 +5,7 @@
 #include <cmath>
 #include <array>
 
-Knight::Knight(Chessman::colorـ color) : Chessman(color, "H") {}
+Knight::Knight(Chessman::color_ color) : Chessman(color, "H") {}
 
 bool Knight::cell_access(const std::string& origin, const std::string& destination, std::array<std::array<Cell, 8>, 8>& board)
 {
