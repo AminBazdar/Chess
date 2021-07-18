@@ -6,12 +6,12 @@ Chessman::Chessman(Chessman::colorـ color, std::string symbol)
     set_symbol(symbol);
 }
 
-void Chessman::set_position(Cell *& position)
+void Chessman::set_position(Position position)
 {
     this->position = position;
 }
 
-Cell*& Chessman::get_position()
+Position Chessman::get_position()
 {
     return position;
 }

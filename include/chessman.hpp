@@ -4,13 +4,7 @@
 #include <iostream>
 #include "cell.hpp"
 
-//hi masoud: this class code is just a first idea,,, you can add change it if you want to 
-
-// struct Position
-// {
-//     int x; // piece x
-//     int y; // piece y
-// };
+using Position = std::string;
 
 class Chessman
 {
@@ -19,8 +13,8 @@ public:
     Chessman(Chessman::colorـ, std::string); //cosntructor
     virtual ~Chessman() {} // destructor
 
-    void set_position(Cell *&);
-    Cell*& get_position();
+    void set_position(Position);
+    Position get_position();
     
     void set_color(Chessman::colorـ);
     Chessman::colorـ get_color();
@@ -28,10 +22,10 @@ public:
     void set_symbol(std::string);
     std::string get_symbol();
 
-    virtual bool cell_access(Cell*&) = 0; //depend on piece type
+    virtual bool cell_access(const std::string&, const std::string&, std::array<std::array<Cell, 8>, 8> &) = 0; //depend on piece type
 
 private:
-    Cell* position; //piece position
+    Position position; //piece position
     Chessman::colorـ color; //piece color
     std::string symbol;
 };

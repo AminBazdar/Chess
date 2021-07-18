@@ -227,4 +227,5 @@ CMakeFiles/exe.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array \
   /Users/aminbazdar/Desktop/Chess/include/chessman.hpp \
-  /Users/aminbazdar/Desktop/Chess/include/cell.hpp
+  /Users/aminbazdar/Desktop/Chess/include/cell.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/knight.hpp

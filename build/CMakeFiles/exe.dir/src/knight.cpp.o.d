@@ -228,4 +228,6 @@ CMakeFiles/exe.dir/src/knight.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
   /Users/aminbazdar/Desktop/Chess/include/cell.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cmath
+  /Users/aminbazdar/Desktop/Chess/include/util.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cmath \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array

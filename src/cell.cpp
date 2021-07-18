@@ -1,4 +1,5 @@
 #include "cell.hpp"
+#include "chessman.hpp"
 #include <string>
 #include <array>
 
@@ -10,7 +11,7 @@ Cell::Cell()
 void Cell::set_cell_id()
 {
     std::array <std::string, 8> col = {"A", "B", "C", "D", "E", "F", "G", "H"};
-    static int row = 1;
+    static int row = 8;
     static int ptr = 0;
     static int counter = 1;
     if (counter > 64)
@@ -21,11 +22,11 @@ void Cell::set_cell_id()
     if (ptr > 7)
     {
         ptr = 0;
-        ++row;
+        --row;
     }
     cell_id = col[ptr] + std::to_string(row);
     ++ptr;
-    ++counter;
+    ++counter; 
 }
 
 std::string Cell::get_cell_id()
@@ -50,9 +51,11 @@ bool Cell::is_fill()
     return cell_state;
 }
 
-void Cell::set_piece(Chessman *& piece)
+void Cell::set_piece(Chessman& piece)
 {
-    this->piece = piece;
+    this->piece = &piece;
+    piece.set_position(get_cell_id());
+    cell_state = true;
 }
 
 Chessman*& Cell::get_piece()

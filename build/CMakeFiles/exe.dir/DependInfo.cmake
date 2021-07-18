@@ -12,6 +12,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/aminbazdar/Desktop/Chess/src/chessman.cpp" "CMakeFiles/exe.dir/src/chessman.cpp.o" "gcc" "CMakeFiles/exe.dir/src/chessman.cpp.o.d"
   "/Users/aminbazdar/Desktop/Chess/src/knight.cpp" "CMakeFiles/exe.dir/src/knight.cpp.o" "gcc" "CMakeFiles/exe.dir/src/knight.cpp.o.d"
   "/Users/aminbazdar/Desktop/Chess/src/main.cpp" "CMakeFiles/exe.dir/src/main.cpp.o" "gcc" "CMakeFiles/exe.dir/src/main.cpp.o.d"
+  "/Users/aminbazdar/Desktop/Chess/src/util.cpp" "CMakeFiles/exe.dir/src/util.cpp.o" "gcc" "CMakeFiles/exe.dir/src/util.cpp.o.d"
   )
 
 # Targets to which this target links.

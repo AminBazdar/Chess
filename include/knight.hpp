@@ -7,8 +7,8 @@
 class Knight : public Chessman
 {
 public:
-    Knight(Cell *&, Chessman::colorـ);
-    bool cell_access(Cell *);
+    Knight(Chessman::colorـ); //constructor
+    bool cell_access(const std::string&, const std::string&, std::array<std::array<Cell, 8>, 8> &);
 
 };
 
