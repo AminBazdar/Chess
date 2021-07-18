@@ -129,6 +129,30 @@ exe/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/build
 .PHONY : exe/fast
 
+src/cell.o: src/cell.cpp.o
+.PHONY : src/cell.o
+
+# target to build an object file
+src/cell.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/cell.cpp.o
+.PHONY : src/cell.cpp.o
+
+src/cell.i: src/cell.cpp.i
+.PHONY : src/cell.i
+
+# target to preprocess a source file
+src/cell.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/cell.cpp.i
+.PHONY : src/cell.cpp.i
+
+src/cell.s: src/cell.cpp.s
+.PHONY : src/cell.s
+
+# target to generate assembly for a file
+src/cell.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/cell.cpp.s
+.PHONY : src/cell.cpp.s
+
 src/chessman.o: src/chessman.cpp.o
 .PHONY : src/chessman.o
 
@@ -186,6 +210,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... exe"
+	@echo "... src/cell.o"
+	@echo "... src/cell.i"
+	@echo "... src/cell.s"
 	@echo "... src/chessman.o"
 	@echo "... src/chessman.i"
 	@echo "... src/chessman.s"

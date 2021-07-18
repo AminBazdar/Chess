@@ -1,5 +1,6 @@
-CMakeFiles/exe.dir/src/main.cpp.o: \
-  /Users/aminbazdar/Desktop/Chess/src/main.cpp \
+CMakeFiles/exe.dir/src/cell.cpp.o: \
+  /Users/aminbazdar/Desktop/Chess/src/cell.cpp \
+  /Users/aminbazdar/Desktop/Chess/include/cell.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/pthread.h \
@@ -225,6 +226,4 @@ CMakeFiles/exe.dir/src/main.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array \
-  /Users/aminbazdar/Desktop/Chess/include/chessman.hpp \
-  /Users/aminbazdar/Desktop/Chess/include/cell.hpp
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array

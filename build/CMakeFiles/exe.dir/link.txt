@@ -1,1 +1,1 @@
-/Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/exe.dir/src/main.cpp.o CMakeFiles/exe.dir/src/chessman.cpp.o -o exe 
+/Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/exe.dir/src/main.cpp.o CMakeFiles/exe.dir/src/chessman.cpp.o CMakeFiles/exe.dir/src/cell.cpp.o -o exe 
