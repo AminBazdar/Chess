@@ -1,5 +1,6 @@
-CMakeFiles/exe.dir/src/chessman.cpp.o: \
-  /Users/aminbazdar/Desktop/Chess/src/chessman.cpp \
+CMakeFiles/exe.dir/src/knight.cpp.o: \
+  /Users/aminbazdar/Desktop/Chess/src/knight.cpp \
+  /Users/aminbazdar/Desktop/Chess/include/knight.hpp \
   /Users/aminbazdar/Desktop/Chess/include/chessman.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
@@ -226,4 +227,5 @@ CMakeFiles/exe.dir/src/chessman.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
-  /Users/aminbazdar/Desktop/Chess/include/cell.hpp
+  /Users/aminbazdar/Desktop/Chess/include/cell.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cmath

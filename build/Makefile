@@ -177,6 +177,30 @@ src/chessman.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/chessman.cpp.s
 .PHONY : src/chessman.cpp.s
 
+src/knight.o: src/knight.cpp.o
+.PHONY : src/knight.o
+
+# target to build an object file
+src/knight.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/knight.cpp.o
+.PHONY : src/knight.cpp.o
+
+src/knight.i: src/knight.cpp.i
+.PHONY : src/knight.i
+
+# target to preprocess a source file
+src/knight.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/knight.cpp.i
+.PHONY : src/knight.cpp.i
+
+src/knight.s: src/knight.cpp.s
+.PHONY : src/knight.s
+
+# target to generate assembly for a file
+src/knight.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/knight.cpp.s
+.PHONY : src/knight.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -216,6 +240,9 @@ help:
 	@echo "... src/chessman.o"
 	@echo "... src/chessman.i"
 	@echo "... src/chessman.s"
+	@echo "... src/knight.o"
+	@echo "... src/knight.i"
+	@echo "... src/knight.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

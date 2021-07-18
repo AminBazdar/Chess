@@ -27,6 +27,7 @@ void Cell::set_cell_id()
     ++ptr;
     ++counter;
 }
+
 std::string Cell::get_cell_id()
 {
     return cell_id;
@@ -47,4 +48,14 @@ void Cell::change_state()
 bool Cell::is_fill()
 {
     return cell_state;
+}
+
+void Cell::set_piece(Chessman *& piece)
+{
+    this->piece = piece;
+}
+
+Chessman*& Cell::get_piece()
+{
+    return piece;
 }

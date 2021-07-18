@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0)
 project(AP)
 set(CMAKE_CXX_STANDARD 11)
-add_executable(exe src/main.cpp src/chessman.cpp src/cell.cpp)
+add_executable(exe src/main.cpp src/chessman.cpp src/cell.cpp src/knight.cpp)
 include_directories(include)

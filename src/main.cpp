@@ -1,5 +1,6 @@
 #include <iostream>
 #include <array>
+#include <string>
 #include "chessman.hpp"
 #include "cell.hpp"
 

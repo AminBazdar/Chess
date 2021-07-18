@@ -13,5 +13,10 @@
   "directory": "/Users/aminbazdar/Desktop/Chess/build",
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/cell.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/cell.cpp",
   "file": "/Users/aminbazdar/Desktop/Chess/src/cell.cpp"
+},
+{
+  "directory": "/Users/aminbazdar/Desktop/Chess/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/knight.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/knight.cpp",
+  "file": "/Users/aminbazdar/Desktop/Chess/src/knight.cpp"
 }
 ]
