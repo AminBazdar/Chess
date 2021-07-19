@@ -18,7 +18,7 @@
 					]
 				}
 			],
-			"name" : "Debug",
+			"name" : "",
 			"projects" : 
 			[
 				{
@@ -38,7 +38,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "exe::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-exe-Debug-a58dd6567b821ff6311c.json",
+					"jsonFile" : "target-exe-499fddb05f81d8277785.json",
 					"name" : "exe",
 					"projectIndex" : 0
 				}
@@ -48,12 +48,12 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/Users/aminbazdar/Desktop/Chess/build",
-		"source" : "/Users/aminbazdar/Desktop/Chess"
+		"build" : "/home/youzat/Desktop/projects/Chess/build",
+		"source" : "/home/youzat/Desktop/projects/Chess"
 	},
 	"version" : 
 	{
 		"major" : 2,
-		"minor" : 2
+		"minor" : 0
 	}
 }

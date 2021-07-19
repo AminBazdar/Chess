@@ -42,7 +42,7 @@
 			"compileCommandFragments" : 
 			[
 				{
-					"fragment" : "-g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk"
+					"fragment" : " "
 				},
 				{
 					"fragment" : "-std=gnu++11"
@@ -52,25 +52,18 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/aminbazdar/Desktop/Chess/include"
+					"path" : "/home/youzat/Desktop/projects/Chess/include"
 				}
 			],
 			"language" : "CXX",
-			"languageStandard" : 
-			{
-				"backtraces" : 
-				[
-					1
-				],
-				"standard" : "11"
-			},
 			"sourceIndexes" : 
 			[
 				0,
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		}
 	],
@@ -80,11 +73,7 @@
 		"commandFragments" : 
 		[
 			{
-				"fragment" : "-g",
-				"role" : "flags"
-			},
-			{
-				"fragment" : "",
+				"fragment" : "-rdynamic",
 				"role" : "flags"
 			}
 		],
@@ -107,7 +96,8 @@
 				1,
 				2,
 				3,
-				4
+				4,
+				5
 			]
 		}
 	],
@@ -141,6 +131,12 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "src/util.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/ChessBoard.cpp",
 			"sourceGroupIndex" : 0
 		}
 	],

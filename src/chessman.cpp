@@ -1,6 +1,6 @@
 #include "chessman.hpp"
 
-Chessman::Chessman(Chessman::colorـ color, std::string symbol)
+Chessman::Chessman(Chessman::color_ color, std::string symbol)
 {
     set_color(color);
     set_symbol(symbol);
@@ -16,12 +16,12 @@ Position Chessman::get_position()
     return position;
 }
 
-void Chessman::set_color(Chessman::colorـ color)
+void Chessman::set_color(Chessman::color_ color)
 {
     this->color = color;
 }
 
-Chessman::colorـ Chessman::get_color()
+Chessman::color_ Chessman::get_color()
 {
     return color;
 }

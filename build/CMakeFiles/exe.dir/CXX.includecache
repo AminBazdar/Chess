@@ -1,0 +1,40 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/cell.hpp
+iostream
+-
+
+../include/chessman.hpp
+iostream
+-
+array
+-
+cell.hpp
+../include/cell.hpp
+
+../include/knight.hpp
+chessman.hpp
+../include/chessman.hpp
+cell.hpp
+../include/cell.hpp
+
+/home/youzat/Desktop/projects/Chess/src/main.cpp
+iostream
+-
+array
+-
+string
+-
+chessman.hpp
+/home/youzat/Desktop/projects/Chess/src/chessman.hpp
+cell.hpp
+/home/youzat/Desktop/projects/Chess/src/cell.hpp
+knight.hpp
+/home/youzat/Desktop/projects/Chess/src/knight.hpp
+
