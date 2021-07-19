@@ -123,6 +123,33 @@ exe/fast:
 	$(MAKE) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/build
 .PHONY : exe/fast
 
+src/ChessBoard.o: src/ChessBoard.cpp.o
+
+.PHONY : src/ChessBoard.o
+
+# target to build an object file
+src/ChessBoard.cpp.o:
+	$(MAKE) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/ChessBoard.cpp.o
+.PHONY : src/ChessBoard.cpp.o
+
+src/ChessBoard.i: src/ChessBoard.cpp.i
+
+.PHONY : src/ChessBoard.i
+
+# target to preprocess a source file
+src/ChessBoard.cpp.i:
+	$(MAKE) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/ChessBoard.cpp.i
+.PHONY : src/ChessBoard.cpp.i
+
+src/ChessBoard.s: src/ChessBoard.cpp.s
+
+.PHONY : src/ChessBoard.s
+
+# target to generate assembly for a file
+src/ChessBoard.cpp.s:
+	$(MAKE) -f CMakeFiles/exe.dir/build.make CMakeFiles/exe.dir/src/ChessBoard.cpp.s
+.PHONY : src/ChessBoard.cpp.s
+
 src/cell.o: src/cell.cpp.o
 
 .PHONY : src/cell.o
@@ -267,6 +294,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... exe"
+	@echo "... src/ChessBoard.o"
+	@echo "... src/ChessBoard.i"
+	@echo "... src/ChessBoard.s"
 	@echo "... src/cell.o"
 	@echo "... src/cell.i"
 	@echo "... src/cell.s"

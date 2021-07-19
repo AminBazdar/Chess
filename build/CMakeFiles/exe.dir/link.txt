@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/exe.dir/src/main.cpp.o CMakeFiles/exe.dir/src/chessman.cpp.o CMakeFiles/exe.dir/src/cell.cpp.o CMakeFiles/exe.dir/src/knight.cpp.o CMakeFiles/exe.dir/src/util.cpp.o  -o exe 
+/usr/bin/c++    -rdynamic CMakeFiles/exe.dir/src/main.cpp.o CMakeFiles/exe.dir/src/chessman.cpp.o CMakeFiles/exe.dir/src/cell.cpp.o CMakeFiles/exe.dir/src/knight.cpp.o CMakeFiles/exe.dir/src/util.cpp.o CMakeFiles/exe.dir/src/ChessBoard.cpp.o  -o exe 
