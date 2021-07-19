@@ -5,7 +5,7 @@
 #include <cmath>
 #include <array>
 
-Knight::Knight(Chessman::color_ color) : Chessman(color, "H") {}
+Knight::Knight(Chessman::color_ color) : Chessman(color, 'H') {}
 
 bool Knight::cell_access(const std::string& origin, const std::string& destination, std::array<std::array<Cell, 8>, 8>& board)
 {
@@ -39,3 +39,7 @@ bool Knight::cell_access(const std::string& origin, const std::string& destinati
     
     return false;
 }
+
+// Positive_Score Knight::check_threats(std::string origin, std::array<std::array<Cell, 8>, 8> &board)
+// {
+// }
