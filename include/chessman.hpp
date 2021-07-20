@@ -10,7 +10,7 @@ using Position = std::string;
 class Chessman
 {
 public:
-    enum class color_ {Withe, Black};
+    enum class color_ {White, Black};
     Chessman(Chessman::color_, char); //cosntructor
     virtual ~Chessman() {} // destructor
 
@@ -23,7 +23,7 @@ public:
     void set_symbol(char);
     char get_symbol();
 
-    virtual bool cell_access(const std::string&, const std::string&, std::array<std::array<Cell, 8>, 8> &) = 0; //depend on piece type
+    virtual bool cell_access(const int&, const int&, const int&, const int&, std::array<std::array<Cell, 8>, 8> &) = 0; //depend on piece type
     
 private:
     Position position; //piece position

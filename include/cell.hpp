@@ -10,10 +10,10 @@ class Cell
 public:
     Cell();
     std::string get_cell_id();
-    void change_state(); //change is fill state
+    void change_state(bool); //change is fill state
     bool is_fill();
-    void set_piece(Chessman&);
-    Chessman*& get_piece();
+    void set_piece(Chessman*);
+    Chessman* get_piece();
 
 private:
     void set_cell_id();

@@ -34,16 +34,9 @@ std::string Cell::get_cell_id()
     return cell_id;
 }
 
-void Cell::change_state()
+void Cell::change_state(bool fill)
 {
-    if (cell_state)
-    {
-        cell_state = false;
-    }
-    else if(!cell_state)
-    {
-        cell_state = true;
-    }
+    cell_state = fill;
 }
 
 bool Cell::is_fill()
@@ -51,14 +44,21 @@ bool Cell::is_fill()
     return cell_state;
 }
 
-void Cell::set_piece(Chessman& piece)
+void Cell::set_piece(Chessman* piece)
 {
-    this->piece = &piece;
-    piece.set_position(get_cell_id());
+    this->piece = piece;
+    if (piece != nullptr)
+    {
+    piece->set_position(get_cell_id());
     cell_state = true;
+    }
+    else
+    {
+        cell_state = false;
+    }
 }
 
-Chessman*& Cell::get_piece()
+Chessman* Cell::get_piece()
 {
     return piece;
 }
