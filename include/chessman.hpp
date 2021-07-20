@@ -6,6 +6,7 @@
 #include "cell.hpp"
 
 using Position = std::string;
+using Positive_Score = int;
 
 class Chessman
 {
@@ -24,6 +25,9 @@ public:
     char get_symbol();
 
     virtual bool cell_access(const int&, const int&, const int&, const int&, std::array<std::array<Cell, 8>, 8> &) = 0; //depend on piece type
+    
+    virtual Positive_Score check_threats(const int&, const int& ,std::array<std::array<Cell, 8>, 8> &) = 0;
+    //checking threats after move and returns score
     
 private:
     Position position; //piece position

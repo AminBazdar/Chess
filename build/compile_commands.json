@@ -16,16 +16,6 @@
 },
 {
   "directory": "/Users/aminbazdar/Desktop/Chess/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/knight.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/knight.cpp",
-  "file": "/Users/aminbazdar/Desktop/Chess/src/knight.cpp"
-},
-{
-  "directory": "/Users/aminbazdar/Desktop/Chess/build",
-  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/util.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/util.cpp",
-  "file": "/Users/aminbazdar/Desktop/Chess/src/util.cpp"
-},
-{
-  "directory": "/Users/aminbazdar/Desktop/Chess/build",
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/ChessBoard.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/ChessBoard.cpp",
   "file": "/Users/aminbazdar/Desktop/Chess/src/ChessBoard.cpp"
 },
@@ -33,5 +23,35 @@
   "directory": "/Users/aminbazdar/Desktop/Chess/build",
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/player.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/player.cpp",
   "file": "/Users/aminbazdar/Desktop/Chess/src/player.cpp"
+},
+{
+  "directory": "/Users/aminbazdar/Desktop/Chess/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/Knight.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/Knight.cpp",
+  "file": "/Users/aminbazdar/Desktop/Chess/src/Knight.cpp"
+},
+{
+  "directory": "/Users/aminbazdar/Desktop/Chess/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/Pawn.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/Pawn.cpp",
+  "file": "/Users/aminbazdar/Desktop/Chess/src/Pawn.cpp"
+},
+{
+  "directory": "/Users/aminbazdar/Desktop/Chess/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/King.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/King.cpp",
+  "file": "/Users/aminbazdar/Desktop/Chess/src/King.cpp"
+},
+{
+  "directory": "/Users/aminbazdar/Desktop/Chess/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/Queen.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/Queen.cpp",
+  "file": "/Users/aminbazdar/Desktop/Chess/src/Queen.cpp"
+},
+{
+  "directory": "/Users/aminbazdar/Desktop/Chess/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/Bishop.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/Bishop.cpp",
+  "file": "/Users/aminbazdar/Desktop/Chess/src/Bishop.cpp"
+},
+{
+  "directory": "/Users/aminbazdar/Desktop/Chess/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/Rook.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/Rook.cpp",
+  "file": "/Users/aminbazdar/Desktop/Chess/src/Rook.cpp"
 }
 ]

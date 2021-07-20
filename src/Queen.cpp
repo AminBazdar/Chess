@@ -70,3 +70,240 @@ bool Queen::cell_access(const int& x_first, const int& y_first ,const int& x_sec
 
     return false;
 }
+
+Positive_Score Queen::check_threats(const int& x, const int& y, std::array<std::array<Cell, 8>, 8> & board)
+{
+    Positive_Score score = 0;
+
+    // threat move like a bishop 
+    for (size_t i = 1, j = 1 ; x + i < 8 && y + j < 8 ; i++ , j++)
+    {
+        if (board[x+i][y+j].is_fill() && board[x+i][y+j].get_piece()->get_color() == get_color())
+        {
+            break;
+        }
+        else if(board[x+i][y+j].is_fill())
+        {
+            switch (board[x+i][y+j].get_piece()->get_symbol())
+            {
+                case 'P':
+                    score += 1;
+                    break;
+
+                case 'Q':
+                    score += 5;
+                    break;
+
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+            }
+            break;
+        }
+    }
+
+    for (size_t i = 1, j = 1 ; x + i < 8 && y - j >= 0 ; i++ , j++)
+    {
+        if (board[x+i][y-j].is_fill() && board[x+i][y-j].get_piece()->get_color() == get_color())
+        {
+            break;
+        }
+        else if(board[x+i][y-j].is_fill())
+        {
+            switch (board[x+i][y-j].get_piece()->get_symbol())
+            {
+                case 'P':
+                    score += 1;
+                    break;
+
+                case 'Q':
+                    score += 5;
+                    break;
+
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+            }
+            break;
+        }
+    }
+
+    for (size_t i = 1, j = 1 ; x - i >= 0 && y + j < 8 ; i++ , j++)
+    {
+        if (board[x-i][y+j].is_fill() && board[x-i][y+j].get_piece()->get_color() == get_color())
+        {
+            break;
+        }
+        else if(board[x-i][y+j].is_fill())
+        {
+            switch (board[x-i][y+j].get_piece()->get_symbol())
+            {
+                case 'P':
+                    score += 1;
+                    break;
+
+                case 'Q':
+                    score += 5;
+                    break;
+
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+            }
+            break;
+        }
+    }
+
+    for (size_t i = 1, j = 1 ; x - i <= 0 && y - j >= 0 ; i++ , j++)
+    {
+        if (board[x-i][y-j].is_fill() && board[x-i][y-j].get_piece()->get_color() == get_color())
+        {
+            break;
+        }
+        else if(board[x-i][y-j].is_fill())
+        {
+            switch (board[x-i][y-j].get_piece()->get_symbol())
+            {
+                case 'P':
+                    score += 1;
+                    break;
+
+                case 'Q':
+                    score += 5;
+                    break;
+
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+            }
+            break;
+        }
+    }
+
+    //threat move like a rook
+    for (size_t i = 1; x + i < 8; i++)
+    {
+        if (board[x+i][y].is_fill() && board[x+i][y].get_piece()->get_color() == get_color())
+        {
+            break;
+        }
+
+        else if (board[x+i][y].is_fill())
+        {
+            switch (board[x+i][y].get_piece()->get_symbol())
+            {
+                case 'P':
+                    score += 1;
+                    break;
+
+                case 'Q':
+                    score += 5;
+                    break;
+
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+            }
+            break;
+        }
+    }
+
+    for (size_t i = 1; x - i >= 0 ; i++)
+    {
+        if (board[x-i][y].is_fill() && board[x-i][y].get_piece()->get_color() == get_color())
+        {
+            break;
+        }
+
+        else if (board[x-i][y].is_fill())
+        {
+            switch (board[x-i][y].get_piece()->get_symbol())
+            {
+                case 'P':
+                    score += 1;
+                    break;
+
+                case 'Q':
+                    score += 5;
+                    break;
+
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+            }
+            break;
+        }
+    }
+    
+    for (size_t j = 1 ; y + j < 8 ; j++)
+    {
+        if (board[x][y+j].is_fill() && board[x][y+j].get_piece()->get_color() == get_color())
+        {
+            break;
+        }
+
+        else if (board[x][y+j].is_fill())
+        {
+            switch (board[x][y+j].get_piece()->get_symbol())
+            {
+                case 'P':
+                    score += 1;
+                    break;
+
+                case 'Q':
+                    score += 5;
+                    break;
+
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+            }
+            break;
+        }
+    }
+    
+    for (size_t j = 1 ; y - j >= 0 ; j++)
+    {
+        if (board[x][y-j].is_fill() && board[x][y-j].get_piece()->get_color() == get_color())
+        {
+            break;
+        }
+
+        else if (board[x][y-j].is_fill())
+        {
+            switch (board[x][y-j].get_piece()->get_symbol())
+            {
+                case 'P':
+                    score += 1;
+                    break;
+
+                case 'Q':
+                    score += 5;
+                    break;
+
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+            }
+            break;
+        }
+    }
+
+    return score;
+}

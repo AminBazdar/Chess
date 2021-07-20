@@ -105,4 +105,96 @@ bool Pawn::cell_access(const int &x_first, const int &y_first, const int &x_seco
         }
     }
     return false;
+};
+
+Positive_Score Pawn::check_threats(const int& x, const int& y, std::array<std::array<Cell, 8>, 8> & board)
+{
+    Positive_Score score = 0;
+
+    if (get_color() == color_::White)
+    {
+        if ((x - 1 >= 0 && y + 1 < 8) && board[x-1][y+1].is_fill() && board[x-1][y+1].get_piece()->get_color() != get_color())
+        {
+            switch (board[x-1][y+1].get_piece()->get_symbol())
+                {
+                case 'P':
+                    score += 1;
+                    break;
+
+                case 'Q':
+                    score += 5;
+                    break;
+
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+                }    
+        }
+
+        if ((x - 1 >= 0 && y - 1 >= 0) && board[x-1][y-1].is_fill() && board[x-1][y-1].get_piece()->get_color() != get_color())
+        {
+            switch (board[x-1][y-1].get_piece()->get_symbol())
+                {
+                case 'P':
+                    score += 1;
+                    break;
+
+                case 'Q':
+                    score += 5;
+                    break;
+
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+                }    
+        }
+    }
+
+    if (get_color() == color_::Black)
+    {
+        if ((x + 1 < 8  && y + 1 < 8) && board[x+1][y+1].is_fill() && board[x+1][y+1].get_piece()->get_color() != get_color())
+        {
+            switch (board[x+1][y+1].get_piece()->get_symbol())
+                {
+                case 'P':
+                    score += 1;
+                    break;
+
+                case 'Q':
+                    score += 5;
+                    break;
+
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+                }    
+        }
+
+        if ((x + 1 < 8 && y - 1 >= 0) && board[x+1][y-1].is_fill() && board[x+1][y-1].get_piece()->get_color() != get_color())
+        {
+            switch (board[x+1][y-1].get_piece()->get_symbol())
+                {
+                case 'P':
+                    score += 1;
+                    break;
+
+                case 'Q':
+                    score += 5;
+                    break;
+
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+                }    
+        }
+    }
+    return score;
 }
