@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 /Library/Developer/CommandLineTools/usr/bin/c++ -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/exe.dir/src/main.cpp.o CMakeFiles/exe.dir/src/chessman.cpp.o CMakeFiles/exe.dir/src/cell.cpp.o CMakeFiles/exe.dir/src/knight.cpp.o CMakeFiles/exe.dir/src/util.cpp.o CMakeFiles/exe.dir/src/ChessBoard.cpp.o CMakeFiles/exe.dir/src/player.cpp.o -o exe 
+=======
+/usr/bin/c++    -rdynamic CMakeFiles/exe.dir/src/main.cpp.o CMakeFiles/exe.dir/src/chessman.cpp.o CMakeFiles/exe.dir/src/cell.cpp.o CMakeFiles/exe.dir/src/ChessBoard.cpp.o CMakeFiles/exe.dir/src/player.cpp.o CMakeFiles/exe.dir/src/Knight.cpp.o CMakeFiles/exe.dir/src/Pawn.cpp.o CMakeFiles/exe.dir/src/King.cpp.o CMakeFiles/exe.dir/src/Queen.cpp.o CMakeFiles/exe.dir/src/Bishop.cpp.o CMakeFiles/exe.dir/src/Rook.cpp.o  -o exe 
+>>>>>>> 252d5bdadf0065de4be0695a254176f7652bd1f9

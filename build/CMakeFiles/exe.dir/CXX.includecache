@@ -6,9 +6,33 @@
 
 #IncludeRegexTransform: 
 
-../include/ChessBoard.hpp
+../include/Pawn.hpp
+chessman.hpp
+../include/chessman.hpp
+cell.hpp
+../include/cell.hpp
 
-/home/youzat/Desktop/projects/Chess/src/ChessBoard.cpp
-ChessBoard.hpp
-/home/youzat/Desktop/projects/Chess/src/ChessBoard.hpp
+../include/cell.hpp
+iostream
+-
+
+../include/chessman.hpp
+iostream
+-
+array
+-
+cell.hpp
+../include/cell.hpp
+
+/home/youzat/Desktop/projects/Chess/src/Pawn.cpp
+Pawn.hpp
+/home/youzat/Desktop/projects/Chess/src/Pawn.hpp
+chessman.hpp
+/home/youzat/Desktop/projects/Chess/src/chessman.hpp
+cell.hpp
+/home/youzat/Desktop/projects/Chess/src/cell.hpp
+cmath
+-
+array
+-
 
