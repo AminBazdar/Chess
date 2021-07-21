@@ -225,4 +225,8 @@ CMakeFiles/exe.dir/src/player.cpp.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/_types/_nl_item.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bitset \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
+  /Users/aminbazdar/Desktop/Chess/include/King.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/chessman.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array \
+  /Users/aminbazdar/Desktop/Chess/include/cell.hpp

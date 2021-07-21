@@ -229,4 +229,6 @@ CMakeFiles/exe.dir/src/main.cpp.o: \
   /Users/aminbazdar/Desktop/Chess/include/chessman.hpp \
   /Users/aminbazdar/Desktop/Chess/include/cell.hpp \
   /Users/aminbazdar/Desktop/Chess/include/Knight.hpp \
-  /Users/aminbazdar/Desktop/Chess/include/ChessBoard.hpp
+  /Users/aminbazdar/Desktop/Chess/include/ChessBoard.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/player.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/King.hpp

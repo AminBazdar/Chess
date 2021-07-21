@@ -32,3 +32,14 @@ void ChessBoard::movePiece(string move)
         // error marboote!!!!!!!!!!!
     }
 }
+
+bool ChessBoard::is_attack(const int& x_destination, const int& y_destination)
+{
+    //no need to check colors (colors has checked in cell access)
+    if (cells[x_destination][y_destination].is_fill())
+    {
+        return true;
+    }
+    
+    return false;
+}

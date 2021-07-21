@@ -227,5 +227,7 @@ CMakeFiles/exe.dir/src/ChessBoard.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array \
-  /Users/aminbazdar/Desktop/Chess/include/chessman.hpp
+  /Users/aminbazdar/Desktop/Chess/include/player.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/King.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/chessman.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array

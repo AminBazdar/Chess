@@ -2,6 +2,7 @@
 #define PLAYER_HPP
 
 #include <iostream>
+#include "King.hpp"
 
 using Name = std::string;
 using Score = int;
@@ -9,19 +10,22 @@ using Score = int;
 class Player
 {
 public:
-    Player(Name);
+    Player();
 
     void set_name(Name);
     Name get_name();
 
-    void add_score(Score);
-    Score get_score();
+    void add_positive_score(Score);
+    Score get_positive_score();
+
+    //void set_king(King &);
+    //King* get_king();
 
 private:
     Name name;
-    Score score = 0;
+    Score positive_score = 0;
+    //King * king = nullptr;
+    //Chessman::color_ color;
 };
-
-
 
 #endif // PLAYER_HPP
