@@ -31,208 +31,184 @@ Positive_Score Knight::check_threats(const int& x, const int& y, std::array<std:
     
     if (x + 2 < 8 && y + 1 < 8)
     {       
-        if (board[x+2][y+1].is_fill())
-        {
-            if (board[x+2][y+1].get_piece()->get_color() != get_color())
+        if (board[x+2][y+1].is_fill() && board[x+2][y+1].get_piece()->get_color() != get_color())
+        {        
+            switch (board[x+2][y+1].get_piece()->get_symbol())
             {
-                switch (board[x+2][y+1].get_piece()->get_symbol())
-                {
-                case 'P':
-                    score += 1;
-                    break;
+            case 'P':
+                score += 1;
+                break;
 
-                case 'Q':
-                    score += 5;
-                    break;
+            case 'Q':
+                score += 5;
+                break;
 
-                case 'H':
-                case 'B':
-                case 'R':
-                    score += 2;
-                    break;
-                }
+            case 'H':
+            case 'B':
+            case 'R':
+                score += 2;
+                break;
             }
         }        
     }
     
     if (x + 2 < 8 && y - 1 >= 0)
     {
-        if (board[x+2][y-1].is_fill())
+        if (board[x+2][y-1].is_fill() && board[x+2][y-1].get_piece()->get_color() != get_color())
         {
-            if (board[x+2][y-1].get_piece()->get_color() != get_color())
+            switch (board[x+2][y-1].get_piece()->get_symbol())
             {
-                switch (board[x+2][y-1].get_piece()->get_symbol())
-                {
-                case 'P':
-                    score += 1;
-                    break;
+            case 'P':
+                score += 1;
+                break;
 
-                case 'Q':
-                    score += 5;
-                    break;
+            case 'Q':
+                score += 5;
+                break;
 
-                case 'H':
-                case 'B':
-                case 'R':
-                    score += 2;
-                    break;
-                }
+            case 'H':
+            case 'B':
+            case 'R':
+                score += 2;
+                break;
             }
         }        
     }
 
-    if (x - 2 >= 0 && y +1 < 8)
+    if (x - 2 >= 0 && y + 1 < 8)
     {
-        if (board[x-2][y+1].is_fill())
+        if (board[x-2][y+1].is_fill() && board[x-2][y+1].get_piece()->get_color() != get_color())
         {
-            if (board[x-2][y+1].get_piece()->get_color() != get_color())
+            switch (board[x-2][y+1].get_piece()->get_symbol())
             {
-                switch (board[x-2][y+1].get_piece()->get_symbol())
-                {
-                case 'P':
-                    score += 1;
-                    break;
+            case 'P':
+                score += 1;
+                break;
 
-                case 'Q':
-                    score += 5;
-                    break;
+            case 'Q':
+                score += 5;
+                break;
 
-                case 'H':
-                case 'B':
-                case 'R':
-                    score += 2;
-                    break;
-                }
+            case 'H':
+            case 'B':
+            case 'R':
+                score += 2;
+                break;
             }
         }
     }
 
     if (x - 2 >= 0 && y - 1 >= 0)
     {            
-        if (board[x-2][y-1].is_fill())
+        if (board[x-2][y-1].is_fill() && board[x-2][y-1].get_piece()->get_color() != get_color())
         {
-            if (board[x-2][y-1].get_piece()->get_color() != get_color())
+            switch (board[x-2][y-1].get_piece()->get_symbol())
             {
-                switch (board[x-2][y-1].get_piece()->get_symbol())
-                {
-                case 'P':
-                    score += 1;
-                    break;
+            case 'P':
+                score += 1;
+                break;
 
-                case 'Q':
-                    score += 5;
-                    break;
+            case 'Q':
+                score += 5;
+                break;
 
-                case 'H':
-                case 'B':
-                case 'R':
-                    score += 2;
-                    break;
-                }
+            case 'H':
+            case 'B':
+            case 'R':
+                score += 2;
+                break;
             }
         }
     }
 
     if (x + 1 < 8 && y + 2 < 8)
     {            
-        if (board[x+1][y+2].is_fill())
+        if (board[x+1][y+2].is_fill() && board[x+1][y+2].get_piece()->get_color() != get_color())
         {
-            if (board[x+1][y+2].get_piece()->get_color() != get_color())
+            switch (board[x+1][y+2].get_piece()->get_symbol())
             {
-                switch (board[x+1][y+2].get_piece()->get_symbol())
-                {
-                case 'P':
-                    score += 1;
-                    break;
+            case 'P':
+                score += 1;
+                break;
 
-                case 'Q':
-                    score += 5;
-                    break;
+            case 'Q':
+                score += 5;
+                break;
 
-                case 'H':
-                case 'B':
-                case 'R':
-                    score += 2;
-                    break;
-                }
+            case 'H':
+            case 'B':
+            case 'R':
+                score += 2;
+                break;
             }
         }   
     }
 
     if (x - 1 >= 0 && y + 2 < 8)
     {            
-        if (board[x-1][y+2].is_fill())
+        if (board[x-1][y+2].is_fill() && board[x-1][y+2].get_piece()->get_color() != get_color())
         {
-            if (board[x-1][y+2].get_piece()->get_color() != get_color())
+            switch (board[x-1][y+2].get_piece()->get_symbol())
             {
-                switch (board[x-1][y+2].get_piece()->get_symbol())
-                {
-                case 'P':
-                    score += 1;
-                    break;
+            case 'P':
+                score += 1;
+                break;
 
-                case 'Q':
-                    score += 5;
-                    break;
+            case 'Q':
+                score += 5;
+                break;
 
-                case 'H':
-                case 'B':
-                case 'R':
-                    score += 2;
-                    break;
-                }
+            case 'H':
+            case 'B':
+            case 'R':
+                score += 2;
+                break;
             }
         }   
     }
 
     if (x + 1 < 8 && y - 2 >= 0)
     {            
-        if (board[x+1][y-2].is_fill())
+        if (board[x+1][y-2].is_fill() && board[x+1][y-2].get_piece()->get_color() != get_color())
         {
-            if (board[x+1][y-2].get_piece()->get_color() != get_color())
+            switch (board[x+1][y-2].get_piece()->get_symbol())
             {
-                switch (board[x+1][y-2].get_piece()->get_symbol())
-                {
-                case 'P':
-                    score += 1;
-                    break;
+            case 'P':
+                score += 1;
+                break;
 
-                case 'Q':
-                    score += 5;
-                    break;
+            case 'Q':
+                score += 5;
+                break;
 
-                case 'H':
-                case 'B':
-                case 'R':
-                    score += 2;
-                    break;
-                }
+            case 'H':
+            case 'B':
+            case 'R':
+                score += 2;
+                break;
             }
         }   
     }
 
     if (x - 1 >= 0 && y - 2 >= 0)
     {
-        if (board[x-1][y-2].is_fill())
+        if (board[x-1][y-2].is_fill() && board[x-1][y-2].get_piece()->get_color() != get_color())
         {
-            if (board[x-1][y-2].get_piece()->get_color() != get_color())
+            switch (board[x-1][y-2].get_piece()->get_symbol())
             {
-                switch (board[x-1][y-2].get_piece()->get_symbol())
-                {
-                case 'P':
-                    score += 1;
-                    break;
+            case 'P':
+                score += 1;
+                break;
 
-                case 'Q':
-                    score += 5;
-                    break;
+            case 'Q':
+                score += 5;
+                break;
 
-                case 'H':
-                case 'B':
-                case 'R':
-                    score += 2;
-                    break;
-                }
+            case 'H':
+            case 'B':
+            case 'R':
+                score += 2;
+                break;
             }
         }    
     }

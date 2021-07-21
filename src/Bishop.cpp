@@ -120,7 +120,7 @@ Positive_Score Bishop::check_threats(const int& x, const int& y, std::array<std:
         }
     }
 
-    for (size_t i = 1, j = 1 ; x - i <= 0 && y - j >= 0 ; i++ , j++)
+    for (size_t i = 1, j = 1 ; x - i >= 0 && y - j >= 0 ; i++ , j++)
     {
         if (board[x-i][y-j].is_fill() && board[x-i][y-j].get_piece()->get_color() == get_color())
         {
@@ -150,4 +150,3 @@ Positive_Score Bishop::check_threats(const int& x, const int& y, std::array<std:
     
     return score;
 }
-

@@ -196,5 +196,6 @@ Positive_Score Pawn::check_threats(const int& x, const int& y, std::array<std::a
                 }    
         }
     }
+    
     return score;
 }
