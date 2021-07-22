@@ -35,19 +35,23 @@ Positive_Score Knight::check_threats(const int& x, const int& y, std::array<std:
         {        
             switch (board[x+2][y+1].get_piece()->get_symbol())
             {
-            case 'P':
-                score += 1;
-                break;
+                case 'P':
+                    score += 1;
+                    break;
 
-            case 'Q':
-                score += 5;
-                break;
+                case 'Q':
+                    score += 5;
+                    break;
 
-            case 'H':
-            case 'B':
-            case 'R':
-                score += 2;
-                break;
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+                
+                case 'K':
+                    score += 10;
+                    break;
             }
         }        
     }
@@ -58,19 +62,23 @@ Positive_Score Knight::check_threats(const int& x, const int& y, std::array<std:
         {
             switch (board[x+2][y-1].get_piece()->get_symbol())
             {
-            case 'P':
-                score += 1;
-                break;
+                case 'P':
+                    score += 1;
+                    break;
 
-            case 'Q':
-                score += 5;
-                break;
+                case 'Q':
+                    score += 5;
+                    break;
 
-            case 'H':
-            case 'B':
-            case 'R':
-                score += 2;
-                break;
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+                
+                case 'K':
+                    score += 10;
+                    break;
             }
         }        
     }
@@ -81,19 +89,23 @@ Positive_Score Knight::check_threats(const int& x, const int& y, std::array<std:
         {
             switch (board[x-2][y+1].get_piece()->get_symbol())
             {
-            case 'P':
-                score += 1;
-                break;
+                case 'P':
+                    score += 1;
+                    break;
 
-            case 'Q':
-                score += 5;
-                break;
+                case 'Q':
+                    score += 5;
+                    break;
 
-            case 'H':
-            case 'B':
-            case 'R':
-                score += 2;
-                break;
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+                
+                case 'K':
+                    score += 10;
+                    break;
             }
         }
     }
@@ -104,19 +116,23 @@ Positive_Score Knight::check_threats(const int& x, const int& y, std::array<std:
         {
             switch (board[x-2][y-1].get_piece()->get_symbol())
             {
-            case 'P':
-                score += 1;
-                break;
+                case 'P':
+                    score += 1;
+                    break;
 
-            case 'Q':
-                score += 5;
-                break;
+                case 'Q':
+                    score += 5;
+                    break;
 
-            case 'H':
-            case 'B':
-            case 'R':
-                score += 2;
-                break;
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+                
+                case 'K':
+                    score += 10;
+                    break;
             }
         }
     }
@@ -127,19 +143,23 @@ Positive_Score Knight::check_threats(const int& x, const int& y, std::array<std:
         {
             switch (board[x+1][y+2].get_piece()->get_symbol())
             {
-            case 'P':
-                score += 1;
-                break;
+                case 'P':
+                    score += 1;
+                    break;
 
-            case 'Q':
-                score += 5;
-                break;
+                case 'Q':
+                    score += 5;
+                    break;
 
-            case 'H':
-            case 'B':
-            case 'R':
-                score += 2;
-                break;
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+                
+                case 'K':
+                    score += 10;
+                    break;
             }
         }   
     }
@@ -150,19 +170,23 @@ Positive_Score Knight::check_threats(const int& x, const int& y, std::array<std:
         {
             switch (board[x-1][y+2].get_piece()->get_symbol())
             {
-            case 'P':
-                score += 1;
-                break;
+                case 'P':
+                    score += 1;
+                    break;
 
-            case 'Q':
-                score += 5;
-                break;
+                case 'Q':
+                    score += 5;
+                    break;
 
-            case 'H':
-            case 'B':
-            case 'R':
-                score += 2;
-                break;
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+                
+                case 'K':
+                    score += 10;
+                    break;
             }
         }   
     }
@@ -173,19 +197,23 @@ Positive_Score Knight::check_threats(const int& x, const int& y, std::array<std:
         {
             switch (board[x+1][y-2].get_piece()->get_symbol())
             {
-            case 'P':
-                score += 1;
-                break;
+                case 'P':
+                    score += 1;
+                    break;
 
-            case 'Q':
-                score += 5;
-                break;
+                case 'Q':
+                    score += 5;
+                    break;
 
-            case 'H':
-            case 'B':
-            case 'R':
-                score += 2;
-                break;
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+                
+                case 'K':
+                    score += 10;
+                    break;
             }
         }   
     }
@@ -196,19 +224,23 @@ Positive_Score Knight::check_threats(const int& x, const int& y, std::array<std:
         {
             switch (board[x-1][y-2].get_piece()->get_symbol())
             {
-            case 'P':
-                score += 1;
-                break;
+                case 'P':
+                    score += 1;
+                    break;
 
-            case 'Q':
-                score += 5;
-                break;
+                case 'Q':
+                    score += 5;
+                    break;
 
-            case 'H':
-            case 'B':
-            case 'R':
-                score += 2;
-                break;
+                case 'H':
+                case 'B':
+                case 'R':
+                    score += 2;
+                    break;
+                
+                case 'K':
+                    score += 10;
+                    break;
             }
         }    
     }

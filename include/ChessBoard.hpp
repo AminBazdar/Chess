@@ -17,12 +17,12 @@ public:
     void movePiece(std::string);                 // a function that enter a move after validation it
 
     bool is_attack(const int&, const int&);      //checking the move is an attack or not
-    Score attack(const int&, const int&) { return 0; } ;//attacks and returns the score of attack (not complete yet)
+    Score attack(const int&, const int&);         //attacks and returns the score of attack (not complete yet)
 
 private:
     ChessBoard();                                // private constructor
     std::array<std::array<Cell, 8>, 8> cells;    //a 2D array of Cell for 64 cells of chess board
-    //std::array<Player*, 2> player;               //index 0 for player with white pieces
+    std::array<Player*, 2> player;               //index 0 for player with white pieces and 1 for black
 };
 
 #endif // CHESSBOARD_HPP

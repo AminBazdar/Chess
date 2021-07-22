@@ -130,6 +130,10 @@ Positive_Score Pawn::check_threats(const int& x, const int& y, std::array<std::a
                 case 'R':
                     score += 2;
                     break;
+                
+                case 'K':
+                    score += 10;
+                    break;
                 }    
         }
 
@@ -149,6 +153,10 @@ Positive_Score Pawn::check_threats(const int& x, const int& y, std::array<std::a
                 case 'B':
                 case 'R':
                     score += 2;
+                    break;
+                
+                case 'K':
+                    score += 10;
                     break;
                 }    
         }
@@ -173,6 +181,10 @@ Positive_Score Pawn::check_threats(const int& x, const int& y, std::array<std::a
                 case 'R':
                     score += 2;
                     break;
+                
+                case 'K':
+                    score += 10;
+                    break;
                 }    
         }
 
@@ -193,9 +205,38 @@ Positive_Score Pawn::check_threats(const int& x, const int& y, std::array<std::a
                 case 'R':
                     score += 2;
                     break;
+                
+                case 'K':
+                    score += 10;
+                    break;
                 }    
         }
     }
     
+    return score;
+}
+
+Positive_Score Pawn::half_point(const int &x_first, const int &x_second)
+{
+    Positive_Score score = 0;
+
+    if (get_color() == color_::White)
+    {
+        if (x_first == 4 && x_second == 3)
+        {
+            score += 3;
+            return score;
+        }
+    }
+
+    if (get_color() == color_::Black)
+    {
+        if (x_first == 3 && x_second == 4)
+        {
+            score += 3;
+            return score;
+        }
+    }
+
     return score;
 }

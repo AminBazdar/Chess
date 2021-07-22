@@ -43,3 +43,27 @@ bool ChessBoard::is_attack(const int& x_destination, const int& y_destination)
     
     return false;
 }
+
+Score ChessBoard::attack(const int& x, const int& y)
+{
+    Score score = 0;
+    
+    switch (cells[x][y].get_piece()->get_symbol())
+    {
+    case 'P':
+        score += 3;
+        break;
+
+    case 'R':
+    case 'H':
+    case 'B':
+        score += 8;
+        break;
+        
+    case 'Q':
+        score += 15;
+        break;
+    }
+
+    return score;
+}

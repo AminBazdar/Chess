@@ -59,6 +59,10 @@ Positive_Score Bishop::check_threats(const int& x, const int& y, std::array<std:
                 case 'R':
                     score += 2;
                     break;
+                
+                case 'K':
+                    score += 10;
+                    break;
             }
             break;
         }
@@ -86,6 +90,10 @@ Positive_Score Bishop::check_threats(const int& x, const int& y, std::array<std:
                 case 'B':
                 case 'R':
                     score += 2;
+                    break;
+                
+                case 'K':
+                    score += 10;
                     break;
             }
             break;
@@ -115,6 +123,10 @@ Positive_Score Bishop::check_threats(const int& x, const int& y, std::array<std:
                 case 'R':
                     score += 2;
                     break;
+                
+                case 'K':
+                    score += 10;
+                    break;
             }
             break;
         }
@@ -142,6 +154,10 @@ Positive_Score Bishop::check_threats(const int& x, const int& y, std::array<std:
                 case 'B':
                 case 'R':
                     score += 2;
+                    break;
+                
+                case 'K':
+                    score += 10;
                     break;
             }
             break;
