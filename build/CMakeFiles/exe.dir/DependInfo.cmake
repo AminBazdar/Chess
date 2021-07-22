@@ -1,24 +1,26 @@
-
-# Consider dependencies only in project.
-set(CMAKE_DEPENDS_IN_PROJECT_ONLY OFF)
-
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
+  "CXX"
   )
+# The set of files for implicit dependencies of each language:
+set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/youzat/Desktop/projects/Chess/src/Bishop.cpp" "/home/youzat/Desktop/projects/Chess/build/CMakeFiles/exe.dir/src/Bishop.cpp.o"
+  "/home/youzat/Desktop/projects/Chess/src/ChessBoard.cpp" "/home/youzat/Desktop/projects/Chess/build/CMakeFiles/exe.dir/src/ChessBoard.cpp.o"
+  "/home/youzat/Desktop/projects/Chess/src/King.cpp" "/home/youzat/Desktop/projects/Chess/build/CMakeFiles/exe.dir/src/King.cpp.o"
+  "/home/youzat/Desktop/projects/Chess/src/Knight.cpp" "/home/youzat/Desktop/projects/Chess/build/CMakeFiles/exe.dir/src/Knight.cpp.o"
+  "/home/youzat/Desktop/projects/Chess/src/Pawn.cpp" "/home/youzat/Desktop/projects/Chess/build/CMakeFiles/exe.dir/src/Pawn.cpp.o"
+  "/home/youzat/Desktop/projects/Chess/src/Queen.cpp" "/home/youzat/Desktop/projects/Chess/build/CMakeFiles/exe.dir/src/Queen.cpp.o"
+  "/home/youzat/Desktop/projects/Chess/src/Rook.cpp" "/home/youzat/Desktop/projects/Chess/build/CMakeFiles/exe.dir/src/Rook.cpp.o"
+  "/home/youzat/Desktop/projects/Chess/src/cell.cpp" "/home/youzat/Desktop/projects/Chess/build/CMakeFiles/exe.dir/src/cell.cpp.o"
+  "/home/youzat/Desktop/projects/Chess/src/chessman.cpp" "/home/youzat/Desktop/projects/Chess/build/CMakeFiles/exe.dir/src/chessman.cpp.o"
+  "/home/youzat/Desktop/projects/Chess/src/main.cpp" "/home/youzat/Desktop/projects/Chess/build/CMakeFiles/exe.dir/src/main.cpp.o"
+  "/home/youzat/Desktop/projects/Chess/src/player.cpp" "/home/youzat/Desktop/projects/Chess/build/CMakeFiles/exe.dir/src/player.cpp.o"
+  )
+set(CMAKE_CXX_COMPILER_ID "GNU")
 
-# The set of dependency files which are needed:
-set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/aminbazdar/Desktop/Chess/src/Bishop.cpp" "CMakeFiles/exe.dir/src/Bishop.cpp.o" "gcc" "CMakeFiles/exe.dir/src/Bishop.cpp.o.d"
-  "/Users/aminbazdar/Desktop/Chess/src/ChessBoard.cpp" "CMakeFiles/exe.dir/src/ChessBoard.cpp.o" "gcc" "CMakeFiles/exe.dir/src/ChessBoard.cpp.o.d"
-  "/Users/aminbazdar/Desktop/Chess/src/King.cpp" "CMakeFiles/exe.dir/src/King.cpp.o" "gcc" "CMakeFiles/exe.dir/src/King.cpp.o.d"
-  "/Users/aminbazdar/Desktop/Chess/src/Knight.cpp" "CMakeFiles/exe.dir/src/Knight.cpp.o" "gcc" "CMakeFiles/exe.dir/src/Knight.cpp.o.d"
-  "/Users/aminbazdar/Desktop/Chess/src/Pawn.cpp" "CMakeFiles/exe.dir/src/Pawn.cpp.o" "gcc" "CMakeFiles/exe.dir/src/Pawn.cpp.o.d"
-  "/Users/aminbazdar/Desktop/Chess/src/Queen.cpp" "CMakeFiles/exe.dir/src/Queen.cpp.o" "gcc" "CMakeFiles/exe.dir/src/Queen.cpp.o.d"
-  "/Users/aminbazdar/Desktop/Chess/src/Rook.cpp" "CMakeFiles/exe.dir/src/Rook.cpp.o" "gcc" "CMakeFiles/exe.dir/src/Rook.cpp.o.d"
-  "/Users/aminbazdar/Desktop/Chess/src/cell.cpp" "CMakeFiles/exe.dir/src/cell.cpp.o" "gcc" "CMakeFiles/exe.dir/src/cell.cpp.o.d"
-  "/Users/aminbazdar/Desktop/Chess/src/chessman.cpp" "CMakeFiles/exe.dir/src/chessman.cpp.o" "gcc" "CMakeFiles/exe.dir/src/chessman.cpp.o.d"
-  "/Users/aminbazdar/Desktop/Chess/src/main.cpp" "CMakeFiles/exe.dir/src/main.cpp.o" "gcc" "CMakeFiles/exe.dir/src/main.cpp.o.d"
-  "/Users/aminbazdar/Desktop/Chess/src/player.cpp" "CMakeFiles/exe.dir/src/player.cpp.o" "gcc" "CMakeFiles/exe.dir/src/player.cpp.o.d"
+# The include file search paths:
+set(CMAKE_CXX_TARGET_INCLUDE_PATH
+  "../include"
   )
 
 # Targets to which this target links.
