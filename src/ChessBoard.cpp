@@ -70,6 +70,8 @@ ChessBoard::~ChessBoard()
 
 void ChessBoard::movePiece(string move)
 {
+    static Chessman::color_ turn = Chessman::color_::White; //show which player turn is
+
     char piece_symb = move[0];        //the piece symb
     int x_first = 8 - (move[2] - 48); // calculate the cells array indexes that piece is in
     int y_first = move[1] - 65;
@@ -77,14 +79,37 @@ void ChessBoard::movePiece(string move)
     int x_second = 8 - (move[4] - 48); // calculate the cells array index that piece wants to go
     int y_second = move[3] - 65;
 
-    if ((cells[x_first][y_first].get_piece())->cell_access(x_first, y_first, x_second, y_second, cells))
+    if (turn == cells[x_first][y_first].get_piece()->get_color()) // Checks the player's turn
     {
-        cells[x_second][y_second].set_piece(cells[x_first][y_first].get_piece());
-        cells[x_first][y_first].set_piece(nullptr);
+        if ((cells[x_first][y_first].get_piece())->cell_access(x_first, y_first, x_second, y_second, cells))
+        {
+            cells[x_second][y_second].set_piece(cells[x_first][y_first].get_piece());
+            cells[x_first][y_first].set_piece(nullptr);
+            if (turn == Chessman::color_::White)
+            {
+                turn = Chessman::color_::Black;
+            }
+            else
+            {
+                turn = Chessman::color_::White;
+            }
+        }
+        else
+        {
+            // error marboote!!!!!!!!!!!
+        }
     }
     else
     {
-        // error marboote!!!!!!!!!!!
+        if (turn == Chessman::color_::White)
+        {
+            cout << "its Whtie's turn !!!" << endl; 
+        }
+        else
+        {
+            cout << "its Black's turn !!!" << endl; 
+
+        }
     }
 }
 

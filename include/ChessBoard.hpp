@@ -19,10 +19,11 @@ public:
 
     bool is_attack(const int &, const int &); //checking the move is an attack or not
     Score attack(const int &, const int &);   //attacks and returns the score of attack (not complete yet)
+    std::array<std::array<Cell, 8>, 8> cells; //a 2D array of Cell for 64 cells of chess board
 
 private:
     ChessBoard();                             // private constructor
-    std::array<std::array<Cell, 8>, 8> cells; //a 2D array of Cell for 64 cells of chess board
+    // std::array<std::array<Cell, 8>, 8> cells; //a 2D array of Cell for 64 cells of chess board
     std::array<Player *, 2> player;           //index 0 for player with white pieces and 1 for black
 };
 

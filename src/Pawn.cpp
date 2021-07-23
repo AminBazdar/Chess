@@ -240,3 +240,11 @@ Positive_Score Pawn::half_point(const int &x_first, const int &x_second)
 
     return score;
 }
+
+
+
+
+
+
+
+
