@@ -17,7 +17,11 @@ cell.hpp
 ../include/cell.hpp
 player.hpp
 ../include/player.hpp
+chessman.hpp
+../include/chessman.hpp
 array
+-
+vector
 -
 
 ../include/King.hpp
@@ -65,8 +69,12 @@ cell.hpp
 ../include/player.hpp
 iostream
 -
+vector
+-
 King.hpp
 ../include/King.hpp
+chessman.hpp
+../include/chessman.hpp
 
 /home/youzat/Desktop/projects/Chess/src/ChessBoard.cpp
 ChessBoard.hpp
@@ -83,23 +91,9 @@ King.hpp
 /home/youzat/Desktop/projects/Chess/src/King.hpp
 Pawn.hpp
 /home/youzat/Desktop/projects/Chess/src/Pawn.hpp
-chessman.hpp
-/home/youzat/Desktop/projects/Chess/src/chessman.hpp
 string
 -
 iostream
--
-
-/home/youzat/Desktop/projects/Chess/src/Pawn.cpp
-Pawn.hpp
-/home/youzat/Desktop/projects/Chess/src/Pawn.hpp
-chessman.hpp
-/home/youzat/Desktop/projects/Chess/src/chessman.hpp
-cell.hpp
-/home/youzat/Desktop/projects/Chess/src/cell.hpp
-cmath
--
-array
 -
 
 /home/youzat/Desktop/projects/Chess/src/main.cpp

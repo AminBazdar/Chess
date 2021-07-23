@@ -5,7 +5,6 @@
 #include "Queen.hpp"
 #include "King.hpp"
 #include "Pawn.hpp"
-#include "chessman.hpp"
 #include <string>
 #include <iostream>
 using namespace std;
@@ -57,7 +56,7 @@ ChessBoard &ChessBoard::make_chess_board()
 
 ChessBoard::ChessBoard() {} // constructor
 
-ChessBoard::~ChessBoard()
+ChessBoard::~ChessBoard() // destructor that deletes the pieces that we allocated manually
 {
     for (int i = 0; i < 8; i++)
     {
@@ -81,11 +80,15 @@ void ChessBoard::movePiece(string move)
 
     if (turn == cells[x_first][y_first].get_piece()->get_color()) // Checks the player's turn
     {
-        if ((cells[x_first][y_first].get_piece())->cell_access(x_first, y_first, x_second, y_second, cells))
+
+        // validation of move
+        switch ((cells[x_first][y_first].get_piece())->cell_access(x_first, y_first, x_second, y_second, cells))
         {
-            cells[x_second][y_second].set_piece(cells[x_first][y_first].get_piece());
+        case Chessman::Move_type::Empty:
+            cells[x_second][y_second].set_piece(cells[x_first][y_first].get_piece()); // moves the piece
             cells[x_first][y_first].set_piece(nullptr);
-            if (turn == Chessman::color_::White)
+
+            if (turn == Chessman::color_::White) // changes the turn
             {
                 turn = Chessman::color_::Black;
             }
@@ -93,36 +96,54 @@ void ChessBoard::movePiece(string move)
             {
                 turn = Chessman::color_::White;
             }
-        }
-        else
-        {
-            // error marboote!!!!!!!!!!!
+            break;
+
+        case Chessman::Move_type::Attack:
+
+            player[turn == Chessman::color_::White ? 1 : 0]->add_attacked_piece(cells[x_second][y_second].get_piece()); // add the attacked pice to the related vector
+
+            cells[x_second][y_second].set_piece(cells[x_first][y_first].get_piece()); // moves the piece
+            cells[x_first][y_first].set_piece(nullptr);
+
+            if (turn == Chessman::color_::White) // changes the turn
+            {
+                turn = Chessman::color_::Black;
+            }
+            else
+            {
+                turn = Chessman::color_::White;
+            }
+            break;
+
+        case Chessman::Move_type::Block:
+            cout << "Error !!!" << endl;
+            cout << "There is a piece on the way !!!!" << endl;
+            break;
+
+        case Chessman::Move_type::SameColor:
+            cout << "Error !!!" << endl;
+            cout << "Cannot attack the same color piece !!!!" << endl;
+            break;
+
+        case Chessman::Move_type::Invalid:
+            cout << "Error !!!" << endl;
+            cout << "Invalid move !!!!" << endl;
+            break;
         }
     }
-    else
+    else // wrong turn error
     {
         if (turn == Chessman::color_::White)
         {
-            cout << "its Whtie's turn !!!" << endl; 
+            cout << "its White's turn !!!" << endl;
         }
         else
         {
-            cout << "its Black's turn !!!" << endl; 
-
+            cout << "its Black's turn !!!" << endl;
         }
     }
 }
 
-bool ChessBoard::is_attack(const int &x_destination, const int &y_destination)
-{
-    //no need to check colors (colors has checked in cell access)
-    if (cells[x_destination][y_destination].is_fill())
-    {
-        return true;
-    }
-
-    return false;
-}
 
 Score ChessBoard::attack(const int &x, const int &y)
 {

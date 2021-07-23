@@ -6,7 +6,7 @@
 
 King::King(Chessman::color_ color) : Chessman(color, 'K') {}
 
-bool King::cell_access(const int& x_first, const int& y_first ,const int& x_second,const int& y_second, std::array<std::array<Cell, 8>, 8> &board)
+Chessman::Move_type King::cell_access(const int& x_first, const int& y_first ,const int& x_second,const int& y_second, std::array<std::array<Cell, 8>, 8> &board)
 {
     if ((abs(x_second - x_first) == 1 && (abs(y_second - y_first) == 1 || abs(y_second - y_first) == 0)) || (abs(x_second - x_first) == 0 && abs(y_second - y_first) == 1))
     {
@@ -14,16 +14,16 @@ bool King::cell_access(const int& x_first, const int& y_first ,const int& x_seco
         {
             if (board[x_second][y_second].get_piece()->get_color() != get_color())
             {
-                return true;
+                return Chessman::Move_type::Attack;
             }
             else
             {
-                return false;
+                return Chessman::Move_type::SameColor;
             }
         }
-        return true;
+        return Chessman::Move_type::Empty;
     }
-    return false;
+    return Chessman::Move_type::Invalid;
 }
 
 bool King::is_safe(std::array<std::array<Cell, 8>, 8>& board)

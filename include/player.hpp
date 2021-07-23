@@ -2,7 +2,9 @@
 #define PLAYER_HPP
 
 #include <iostream>
+#include <vector>
 #include "King.hpp"
+#include "chessman.hpp"
 
 using Name = std::string;
 using Score = int;
@@ -21,10 +23,13 @@ public:
     void set_king(King &);
     King* get_king();
 
+    void add_attacked_piece(Chessman *);
+
 private:
     Name name;
     Score positive_score = 0;
     King * king = nullptr; 
+    std::vector<Chessman*> attacked_pieces;
 };
 
 #endif // PLAYER_HPP

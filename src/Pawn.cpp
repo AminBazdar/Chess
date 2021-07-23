@@ -6,7 +6,7 @@
 
 Pawn::Pawn(Chessman::color_ color) : Chessman(color, 'P') {}
 
-bool Pawn::cell_access(const int &x_first, const int &y_first, const int &x_second, const int &y_second, std::array<std::array<Cell, 8>, 8> &board)
+Chessman::Move_type Pawn::cell_access(const int &x_first, const int &y_first, const int &x_second, const int &y_second, std::array<std::array<Cell, 8>, 8> &board)
 {
     if (get_color() == color_::White)
     {
@@ -16,43 +16,57 @@ bool Pawn::cell_access(const int &x_first, const int &y_first, const int &x_seco
             {
                 if (y_first == y_second && board[x_second][y_second].is_fill() == false)
                 {
-                    return true;
+                    return Chessman::Move_type::Empty;
                 }
-                if (abs(y_second - y_first) == 1 && board[x_second][y_second].is_fill() == true && board[x_second][y_second].get_piece()->get_color() != get_color())
+                if (abs(y_second - y_first) == 1 && board[x_second][y_second].is_fill() == true)
                 {
-                    return true;
+                    if (board[x_second][y_second].get_piece()->get_color() != get_color())
+                    {
+                        return Chessman::Move_type::Attack;
+                    }
+                    else
+                    {
+                        return Chessman::Move_type::SameColor;
+                    }
                 }
-                return false;
+                return Chessman::Move_type::Invalid;
             }
             if (x_second - x_first == -2)
             {
-                if (y_first == y_second && board[x_second + 1][y_second].is_fill() == false && board[x_second][y_second].is_fill() == false)
+                if (y_first == y_second && board[x_second][y_second].is_fill() == false)
                 {
-                    return true;
+                    if (board[x_second + 1][y_second].is_fill() == false)
+                    {
+                        return Chessman::Move_type::Empty;
+                    }
+                    else
+                    {
+                        return Chessman::Move_type::Block;
+                    }
                 }
-                return false;
+                return Chessman::Move_type::Invalid;
             }
         }
         else
         {
-            bool access = false;
             if (x_second - x_first == -1)
             {
                 if (y_first == y_second && board[x_second][y_second].is_fill() == false)
                 {
-                    access = true;
+                    return Chessman::Move_type::Empty;
                 }
-                else if (abs(y_second - y_first) == 1 && board[x_second][y_second].is_fill() == true && board[x_second][y_second].get_piece()->get_color() != get_color())
+                else if (abs(y_second - y_first) == 1 && board[x_second][y_second].is_fill() == true)
                 {
-                    access = true;
+                    if (board[x_second][y_second].get_piece()->get_color() != get_color())
+                    {
+                        return Chessman::Move_type::Attack;
+                    }
+                    else
+                    {
+                        return Chessman::Move_type::SameColor;
+                    }
                 }
-                if (access == true && x_second == 0)
-                {
-                    // residan sarbaz be akharin khane !!!!!!!!!
-                    // neveshtan function marboote !!!!!!!!!!
-                    return true;
-                }
-                return access;
+                return Chessman::Move_type::Invalid;
             }
         }
     }
@@ -64,155 +78,169 @@ bool Pawn::cell_access(const int &x_first, const int &y_first, const int &x_seco
             {
                 if (y_first == y_second && board[x_second][y_second].is_fill() == false)
                 {
-                    return true;
+                    return Chessman::Move_type::Empty;
                 }
-                if (abs(y_second - y_first) == 1 && board[x_second][y_second].is_fill() == true && board[x_second][y_second].get_piece()->get_color() != get_color())
+                if (abs(y_second - y_first) == 1 && board[x_second][y_second].is_fill() == true)
                 {
-                    return true;
+                    if (board[x_second][y_second].get_piece()->get_color() != get_color())
+                    {
+                        return Chessman::Move_type::Attack;
+                    }
+                    else
+                    {
+                        return Chessman::Move_type::SameColor;
+                    }
                 }
-                return false;
+                return Chessman::Move_type::Invalid;
             }
             if (x_second - x_first == 2)
             {
-                if (y_first == y_second && board[x_second - 1][y_second].is_fill() == false && board[x_second][y_second].is_fill() == false)
+                if (y_first == y_second && board[x_second][y_second].is_fill() == false)
                 {
-                    return true;
+                    if (board[x_second - 1][y_second].is_fill() == false)
+                    {
+                        return Chessman::Move_type::Empty;
+                    }
+                    else
+                    {
+                        return Chessman::Move_type::Block;
+                    }
                 }
-                return false;
+                return Chessman::Move_type::Invalid;
             }
         }
         else
         {
-            bool access = false;
             if (x_second - x_first == 1)
             {
                 if (y_first == y_second && board[x_second][y_second].is_fill() == false)
                 {
-                    access = true;
+                    return Chessman::Move_type::Empty;
                 }
-                else if (abs(y_second - y_first) == 1 && board[x_second][y_second].is_fill() == true && board[x_second][y_second].get_piece()->get_color() != get_color())
+                else if (abs(y_second - y_first) == 1 && board[x_second][y_second].is_fill() == true)
                 {
-                    access = true;
+                    if (board[x_second][y_second].get_piece()->get_color() != get_color())
+                    {
+                        return Chessman::Move_type::Attack;
+                    }
+                    else
+                    {
+                        return Chessman::Move_type::SameColor;
+                    }
                 }
-                if (access == true && x_second == 7)
-                {
-                    // residan sarbaz be akharin khane !!!!!!!!!
-                    // neveshtan function marboote !!!!!!!!!!
-                    return true;
-                }
-                return access;
+                return Chessman::Move_type::Invalid;
             }
         }
     }
-    return false;
+    return Chessman::Move_type::Invalid;
 };
 
-Positive_Score Pawn::check_threats(const int& x, const int& y, std::array<std::array<Cell, 8>, 8> & board)
+Positive_Score Pawn::check_threats(const int &x, const int &y, std::array<std::array<Cell, 8>, 8> &board)
 {
     Positive_Score score = 0;
 
     if (get_color() == color_::White)
     {
-        if ((x - 1 >= 0 && y + 1 < 8) && board[x-1][y+1].is_fill() && board[x-1][y+1].get_piece()->get_color() != get_color())
+        if ((x - 1 >= 0 && y + 1 < 8) && board[x - 1][y + 1].is_fill() && board[x - 1][y + 1].get_piece()->get_color() != get_color())
         {
-            switch (board[x-1][y+1].get_piece()->get_symbol())
-                {
-                case 'P':
-                    score += 1;
-                    break;
+            switch (board[x - 1][y + 1].get_piece()->get_symbol())
+            {
+            case 'P':
+                score += 1;
+                break;
 
-                case 'Q':
-                    score += 5;
-                    break;
+            case 'Q':
+                score += 5;
+                break;
 
-                case 'H':
-                case 'B':
-                case 'R':
-                    score += 2;
-                    break;
-                
-                case 'K':
-                    score += 10;
-                    break;
-                }    
+            case 'H':
+            case 'B':
+            case 'R':
+                score += 2;
+                break;
+
+            case 'K':
+                score += 10;
+                break;
+            }
         }
 
-        if ((x - 1 >= 0 && y - 1 >= 0) && board[x-1][y-1].is_fill() && board[x-1][y-1].get_piece()->get_color() != get_color())
+        if ((x - 1 >= 0 && y - 1 >= 0) && board[x - 1][y - 1].is_fill() && board[x - 1][y - 1].get_piece()->get_color() != get_color())
         {
-            switch (board[x-1][y-1].get_piece()->get_symbol())
-                {
-                case 'P':
-                    score += 1;
-                    break;
+            switch (board[x - 1][y - 1].get_piece()->get_symbol())
+            {
+            case 'P':
+                score += 1;
+                break;
 
-                case 'Q':
-                    score += 5;
-                    break;
+            case 'Q':
+                score += 5;
+                break;
 
-                case 'H':
-                case 'B':
-                case 'R':
-                    score += 2;
-                    break;
-                
-                case 'K':
-                    score += 10;
-                    break;
-                }    
+            case 'H':
+            case 'B':
+            case 'R':
+                score += 2;
+                break;
+
+            case 'K':
+                score += 10;
+                break;
+            }
         }
     }
 
     if (get_color() == color_::Black)
     {
-        if ((x + 1 < 8  && y + 1 < 8) && board[x+1][y+1].is_fill() && board[x+1][y+1].get_piece()->get_color() != get_color())
+        if ((x + 1 < 8 && y + 1 < 8) && board[x + 1][y + 1].is_fill() && board[x + 1][y + 1].get_piece()->get_color() != get_color())
         {
-            switch (board[x+1][y+1].get_piece()->get_symbol())
-                {
-                case 'P':
-                    score += 1;
-                    break;
+            switch (board[x + 1][y + 1].get_piece()->get_symbol())
+            {
+            case 'P':
+                score += 1;
+                break;
 
-                case 'Q':
-                    score += 5;
-                    break;
+            case 'Q':
+                score += 5;
+                break;
 
-                case 'H':
-                case 'B':
-                case 'R':
-                    score += 2;
-                    break;
-                
-                case 'K':
-                    score += 10;
-                    break;
-                }    
+            case 'H':
+            case 'B':
+            case 'R':
+                score += 2;
+                break;
+
+            case 'K':
+                score += 10;
+                break;
+            }
         }
 
-        if ((x + 1 < 8 && y - 1 >= 0) && board[x+1][y-1].is_fill() && board[x+1][y-1].get_piece()->get_color() != get_color())
+        if ((x + 1 < 8 && y - 1 >= 0) && board[x + 1][y - 1].is_fill() && board[x + 1][y - 1].get_piece()->get_color() != get_color())
         {
-            switch (board[x+1][y-1].get_piece()->get_symbol())
-                {
-                case 'P':
-                    score += 1;
-                    break;
+            switch (board[x + 1][y - 1].get_piece()->get_symbol())
+            {
+            case 'P':
+                score += 1;
+                break;
 
-                case 'Q':
-                    score += 5;
-                    break;
+            case 'Q':
+                score += 5;
+                break;
 
-                case 'H':
-                case 'B':
-                case 'R':
-                    score += 2;
-                    break;
-                
-                case 'K':
-                    score += 10;
-                    break;
-                }    
+            case 'H':
+            case 'B':
+            case 'R':
+                score += 2;
+                break;
+
+            case 'K':
+                score += 10;
+                break;
+            }
         }
     }
-    
+
     return score;
 }
 
@@ -240,11 +268,3 @@ Positive_Score Pawn::half_point(const int &x_first, const int &x_second)
 
     return score;
 }
-
-
-
-
-
-
-
-

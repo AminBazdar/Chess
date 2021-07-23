@@ -6,7 +6,7 @@
 
 Knight::Knight(Chessman::color_ color) : Chessman(color, 'H') {}
 
-bool Knight::cell_access(const int& x_first, const int& y_first ,const int& x_second,const int& y_second, std::array<std::array<Cell, 8>, 8> &board)
+Chessman::Move_type Knight::cell_access(const int& x_first, const int& y_first ,const int& x_second,const int& y_second, std::array<std::array<Cell, 8>, 8> &board)
 {
 
     if ((abs(x_first - x_second) == 2 && abs(y_first - y_second) == 1) ||
@@ -14,15 +14,19 @@ bool Knight::cell_access(const int& x_first, const int& y_first ,const int& x_se
     {
         if (!board[x_second][y_second].is_fill())
         {
-            return true;
+            return Chessman::Move_type::Empty;
         }
         else if (board[x_second][y_second].get_piece()->get_color() != get_color())
         {
-            return true;
+            return Chessman::Move_type::Attack;
+        }
+        else
+        {
+            return Chessman::Move_type::SameColor;
         }
     }
 
-    return false;
+    return Chessman::Move_type::Invalid;
 }
 
 Positive_Score Knight::check_threats(const int& x, const int& y, std::array<std::array<Cell, 8>, 8> & board)

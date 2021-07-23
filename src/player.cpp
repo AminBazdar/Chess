@@ -23,6 +23,11 @@ Score Player::get_positive_score()
     return positive_score;
 }
 
+void Player::add_attacked_piece(Chessman * piece)
+{
+    attacked_pieces.push_back(piece);
+}
+
 // void Player::set_king(King& king)
 // {
 //     this->king = &king;
