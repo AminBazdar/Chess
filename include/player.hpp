@@ -20,15 +20,15 @@ public:
     void add_positive_score(Score);
     Score get_positive_score();
 
-    void set_king(King &);
-    King* get_king();
+    void set_king(Chessman *);
+    Chessman* get_king();
 
     void add_attacked_piece(Chessman *);
 
 private:
     Name name;
     Score positive_score = 0;
-    King * king = nullptr; 
+    Chessman * king = nullptr; 
     std::vector<Chessman*> attacked_pieces;
 };
 

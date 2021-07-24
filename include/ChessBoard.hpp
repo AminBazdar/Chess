@@ -20,7 +20,7 @@ public:
     void movePiece(std::string);                 // a function that enter a move after validation it
 
     Score attack(const int &, const int &);      //attacks and returns the score of attack (not complete yet)
-
+    bool game_check(Chessman::color_);
 private:
     ChessBoard();                                // private constructor
     std::array<std::array<Cell, 8>, 8> cells;    //a 2D array of Cell for 64 cells of chess board

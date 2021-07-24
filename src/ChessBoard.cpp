@@ -54,7 +54,9 @@ ChessBoard &ChessBoard::make_chess_board()
     return board;
 }
 
-ChessBoard::ChessBoard() {} // constructor
+ChessBoard::ChessBoard()
+{
+} // constructor
 
 ChessBoard::~ChessBoard() // destructor that deletes the pieces that we allocated manually
 {
@@ -65,6 +67,8 @@ ChessBoard::~ChessBoard() // destructor that deletes the pieces that we allocate
             delete cells[i][j].get_piece();
         }
     }
+
+    
 }
 
 void ChessBoard::movePiece(string move)
@@ -87,33 +91,52 @@ void ChessBoard::movePiece(string move)
         case Chessman::Move_type::Empty:
             cells[x_second][y_second].set_piece(cells[x_first][y_first].get_piece()); // moves the piece
             cells[x_first][y_first].set_piece(nullptr);
-
-            if (turn == Chessman::color_::White) // changes the turn
+            if (game_check(turn))
             {
-                turn = Chessman::color_::Black;
+                cells[x_first][y_first].set_piece(cells[x_second][y_second].get_piece()); // moves the piece
+                cells[x_second][y_second].set_piece(nullptr);
+                cout << "you're check!!!" << endl;
             }
             else
             {
-                turn = Chessman::color_::White;
+
+                if (turn == Chessman::color_::White) // changes the turn
+                {
+                    turn = Chessman::color_::Black;
+                }
+                else
+                {
+                    turn = Chessman::color_::White;
+                }
             }
             break;
-
         case Chessman::Move_type::Attack:
-
-            player[turn == Chessman::color_::White ? 1 : 0]->add_attacked_piece(cells[x_second][y_second].get_piece()); // add the attacked pice to the related vector
+        {
+            Chessman *temp = cells[x_second][y_second].get_piece();
 
             cells[x_second][y_second].set_piece(cells[x_first][y_first].get_piece()); // moves the piece
             cells[x_first][y_first].set_piece(nullptr);
-
-            if (turn == Chessman::color_::White) // changes the turn
+            if (game_check(turn))
             {
-                turn = Chessman::color_::Black;
+                cells[x_first][y_first].set_piece(cells[x_second][y_second].get_piece()); // moves the piece
+                cells[x_second][y_second].set_piece(temp);
+                cout << "you're check!!!" << endl;
             }
             else
             {
-                turn = Chessman::color_::White;
+                player[turn == Chessman::color_::White ? 1 : 0]->add_attacked_piece(temp); // add the attacked pice to the related vector
+
+                if (turn == Chessman::color_::White) // changes the turn
+                {
+                    turn = Chessman::color_::Black;
+                }
+                else
+                {
+                    turn = Chessman::color_::White;
+                }
             }
-            break;
+        }
+        break;
 
         case Chessman::Move_type::Block:
             cout << "Error !!!" << endl;
@@ -144,6 +167,48 @@ void ChessBoard::movePiece(string move)
     }
 }
 
+bool ChessBoard::game_check(Chessman::color_ turn)
+{
+    int king_x;
+    int king_y;
+
+    string temp;
+
+    for (int i = 0; i < 8; i++)
+    {
+        for (int j = 0; j < 8; j++)
+        {
+            if (cells[i][j].get_piece() != nullptr)
+            {
+                if (cells[i][j].get_piece()->get_symbol() == 'K' && cells[i][j].get_piece()->get_color() == turn)
+                {
+                    temp = cells[i][j].get_cell_id();
+                }
+            }
+        }
+    }
+    
+    king_x = 8 - (temp[1] - 48);
+    king_y = temp[0] - 65;
+
+    for (int i = 0; i < 8; i++)
+    {
+        for (int j = 0; j < 8; j++)
+        {
+            if (cells[i][j].get_piece() != nullptr)
+            {
+                if (cells[i][j].get_piece()->get_color() != turn)
+                {
+                    if (cells[i][j].get_piece()->cell_access(i, j, king_x, king_y, cells) == Chessman::Move_type::Attack)
+                    {
+                        return true;
+                    }
+                }
+            }
+        }
+    }
+    return false;
+}
 
 Score ChessBoard::attack(const int &x, const int &y)
 {
