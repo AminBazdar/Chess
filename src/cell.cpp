@@ -58,7 +58,14 @@ void Cell::set_piece(Chessman* piece)
     }
 }
 
-Chessman* Cell::get_piece()
+Chessman*& Cell::get_piece()
 {
     return piece;
+}
+
+void Cell::operator=(Cell cell)
+{
+    cell_id = cell.cell_id;
+    cell_state = cell.cell_state;
+    piece = cell.piece;
 }

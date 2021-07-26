@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/Users/aminbazdar/Desktop/Chess/src/Rook.cpp" "CMakeFiles/exe.dir/src/Rook.cpp.o" "gcc" "CMakeFiles/exe.dir/src/Rook.cpp.o.d"
   "/Users/aminbazdar/Desktop/Chess/src/cell.cpp" "CMakeFiles/exe.dir/src/cell.cpp.o" "gcc" "CMakeFiles/exe.dir/src/cell.cpp.o.d"
   "/Users/aminbazdar/Desktop/Chess/src/chessman.cpp" "CMakeFiles/exe.dir/src/chessman.cpp.o" "gcc" "CMakeFiles/exe.dir/src/chessman.cpp.o.d"
+  "/Users/aminbazdar/Desktop/Chess/src/game.cpp" "CMakeFiles/exe.dir/src/game.cpp.o" "gcc" "CMakeFiles/exe.dir/src/game.cpp.o.d"
   "/Users/aminbazdar/Desktop/Chess/src/main.cpp" "CMakeFiles/exe.dir/src/main.cpp.o" "gcc" "CMakeFiles/exe.dir/src/main.cpp.o.d"
   "/Users/aminbazdar/Desktop/Chess/src/player.cpp" "CMakeFiles/exe.dir/src/player.cpp.o" "gcc" "CMakeFiles/exe.dir/src/player.cpp.o.d"
   )

@@ -227,4 +227,8 @@ CMakeFiles/exe.dir/src/cell.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
   /Users/aminbazdar/Desktop/Chess/include/chessman.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/map \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tree \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__node_handle \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/optional

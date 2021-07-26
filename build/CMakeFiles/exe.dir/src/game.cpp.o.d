@@ -1,7 +1,8 @@
-CMakeFiles/exe.dir/src/Bishop.cpp.o: \
-  /Users/aminbazdar/Desktop/Chess/src/Bishop.cpp \
-  /Users/aminbazdar/Desktop/Chess/include/Bishop.hpp \
-  /Users/aminbazdar/Desktop/Chess/include/chessman.hpp \
+CMakeFiles/exe.dir/src/game.cpp.o: \
+  /Users/aminbazdar/Desktop/Chess/src/game.cpp \
+  /Users/aminbazdar/Desktop/Chess/include/game.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/ChessBoard.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/cell.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk/usr/include/pthread.h \
@@ -227,14 +228,13 @@ CMakeFiles/exe.dir/src/Bishop.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bsd_locale_defaults.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
+  /Users/aminbazdar/Desktop/Chess/include/player.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
+  /Users/aminbazdar/Desktop/Chess/include/King.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/chessman.hpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/map \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tree \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__node_handle \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/optional \
-  /Users/aminbazdar/Desktop/Chess/include/cell.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cmath \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/random \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/numeric \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/optional

@@ -228,5 +228,13 @@ CMakeFiles/exe.dir/src/Pawn.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/map \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tree \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__node_handle \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/optional \
   /Users/aminbazdar/Desktop/Chess/include/cell.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cmath
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cmath \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/random \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/numeric \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer

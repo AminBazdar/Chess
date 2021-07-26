@@ -228,6 +228,20 @@ CMakeFiles/exe.dir/src/ChessBoard.cpp.o: \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/bitset \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__bit_reference \
   /Users/aminbazdar/Desktop/Chess/include/player.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/vector \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__split_buffer \
   /Users/aminbazdar/Desktop/Chess/include/King.hpp \
   /Users/aminbazdar/Desktop/Chess/include/chessman.hpp \
-  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/array \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/map \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__tree \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__node_handle \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/optional \
+  /Users/aminbazdar/Desktop/Chess/include/Rook.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/Knight.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/Bishop.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/Queen.hpp \
+  /Users/aminbazdar/Desktop/Chess/include/Pawn.hpp \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/random \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/cmath \
+  /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/numeric

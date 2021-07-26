@@ -3,10 +3,13 @@
 #include "cell.hpp"
 #include <cmath>
 #include <array>
+#include <map>
+#include <random>
+#include <iterator>
 
 Knight::Knight(Chessman::color_ color) : Chessman(color, 'H') {}
 
-bool Knight::cell_access(const int& x_first, const int& y_first ,const int& x_second,const int& y_second, std::array<std::array<Cell, 8>, 8> &board)
+Chessman::Move_type Knight::cell_access(const int& x_first, const int& y_first ,const int& x_second,const int& y_second, std::array<std::array<Cell, 8>, 8> &board)
 {
 
     if ((abs(x_first - x_second) == 2 && abs(y_first - y_second) == 1) ||
@@ -14,18 +17,22 @@ bool Knight::cell_access(const int& x_first, const int& y_first ,const int& x_se
     {
         if (!board[x_second][y_second].is_fill())
         {
-            return true;
+            return Chessman::Move_type::Empty;
         }
         else if (board[x_second][y_second].get_piece()->get_color() != get_color())
         {
-            return true;
+            return Chessman::Move_type::Attack;
+        }
+        else
+        {
+            return Chessman::Move_type::SameColor;
         }
     }
 
-    return false;
+    return Chessman::Move_type::Invalid;
 }
 
-Positive_Score Knight::check_threats(const int& x, const int& y, std::array<std::array<Cell, 8>, 8> & board)
+Positive_Score Knight::move_score(const int& x, const int& y, std::array<std::array<Cell, 8>, 8> & board)
 {
     Positive_Score score = 0;
     
@@ -246,4 +253,60 @@ Positive_Score Knight::check_threats(const int& x, const int& y, std::array<std:
     }
 
     return score;
+}
+
+std::string Knight::random_cell(const int& x, const int& y, std::array<std::array<Cell, 8>, 8> & board)
+{
+    move_access.clear();
+
+    if (x + 2 < 8 && y + 1 < 8)
+    {       
+        move_access.insert(std::make_pair(x+2, y+1));
+    }
+    
+    if (x + 2 < 8 && y - 1 >= 0)
+    {
+        move_access.insert(std::make_pair(x+2, y-1));
+    }
+
+    if (x - 2 >= 0 && y + 1 < 8)
+    {
+        move_access.insert(std::make_pair(x-2, y+1));
+    }
+
+    if (x - 2 >= 0 && y - 1 >= 0)
+    {            
+        move_access.insert(std::make_pair(x-2, y-1));
+    }
+
+    if (x + 1 < 8 && y + 2 < 8)
+    {            
+        move_access.insert(std::make_pair(x+1, y+2));
+    }
+
+    if (x - 1 >= 0 && y + 2 < 8)
+    {            
+        move_access.insert(std::make_pair(x-1, y+2));
+    }
+
+    if (x + 1 < 8 && y - 2 >= 0)
+    {            
+        move_access.insert(std::make_pair(x+1, y-2));
+    }
+
+    if (x - 1 >= 0 && y - 2 >= 0)
+    {
+        move_access.insert(std::make_pair(x-1, y-2));
+    }
+
+    std::default_random_engine Eng(static_cast<unsigned int>(time(NULL)));
+    std::uniform_int_distribution<unsigned int> Rand(0 ,100);
+    unsigned int number = Rand(Eng) % move_access.size();
+    std::multimap<int, int>::iterator it = move_access.begin();
+    
+    for (size_t i = 0; i < number; i++)
+    {
+        it++;
+    }
+    return board[it->first][it->second].get_cell_id();
 }

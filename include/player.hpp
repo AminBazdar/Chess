@@ -2,7 +2,9 @@
 #define PLAYER_HPP
 
 #include <iostream>
+#include <vector>
 #include "King.hpp"
+#include "chessman.hpp"
 
 using Name = std::string;
 using Score = int;
@@ -17,14 +19,20 @@ public:
 
     void add_positive_score(Score);
     Score get_positive_score();
+    void add_negative_score(Score);
+    Score get_negative_score();
 
-    void set_king(King &);
-    King* get_king();
-
+    void add_attacked_piece(Chessman *);
+    //bool can_enpassant = false;
+    
+    std::string last_move;
+    void operator=(Player&);
+    
 private:
     Name name;
     Score positive_score = 0;
-    King * king = nullptr; 
+    Score negative_score = 0;
+    std::vector<Chessman*> attacked_pieces;
 };
 
 #endif // PLAYER_HPP

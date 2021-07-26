@@ -13,8 +13,10 @@ public:
     void change_state(bool); //change is fill state
     bool is_fill();
     void set_piece(Chessman*);
-    Chessman* get_piece();
+    Chessman*& get_piece();
 
+    void operator=(Cell);
+    
 private:
     void set_cell_id();
     std::string cell_id;

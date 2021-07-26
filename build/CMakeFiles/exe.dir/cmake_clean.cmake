@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/exe.dir/src/cell.cpp.o.d"
   "CMakeFiles/exe.dir/src/chessman.cpp.o"
   "CMakeFiles/exe.dir/src/chessman.cpp.o.d"
+  "CMakeFiles/exe.dir/src/game.cpp.o"
+  "CMakeFiles/exe.dir/src/game.cpp.o.d"
   "CMakeFiles/exe.dir/src/main.cpp.o"
   "CMakeFiles/exe.dir/src/main.cpp.o.d"
   "CMakeFiles/exe.dir/src/player.cpp.o"

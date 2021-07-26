@@ -53,5 +53,10 @@
   "directory": "/Users/aminbazdar/Desktop/Chess/build",
   "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/Rook.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/Rook.cpp",
   "file": "/Users/aminbazdar/Desktop/Chess/src/Rook.cpp"
+},
+{
+  "directory": "/Users/aminbazdar/Desktop/Chess/build",
+  "command": "/Library/Developer/CommandLineTools/usr/bin/c++  -I/Users/aminbazdar/Desktop/Chess/include -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX11.1.sdk -std=gnu++11 -o CMakeFiles/exe.dir/src/game.cpp.o -c /Users/aminbazdar/Desktop/Chess/src/game.cpp",
+  "file": "/Users/aminbazdar/Desktop/Chess/src/game.cpp"
 }
 ]

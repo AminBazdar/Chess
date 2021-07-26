@@ -35,3 +35,13 @@ char Chessman::get_symbol()
 {
     return symbol;
 }
+
+bool Chessman::is_moved()
+{
+    return moved;
+}
+
+void Chessman::has_moved()
+{
+    moved = true;
+}

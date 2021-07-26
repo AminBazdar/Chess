@@ -12,5 +12,6 @@ src/Pawn.cpp
 src/King.cpp
 src/Queen.cpp
 src/Bishop.cpp
-src/Rook.cpp)
+src/Rook.cpp
+src/game.cpp)
 include_directories(include)
