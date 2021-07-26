@@ -11,17 +11,6 @@ Pawn::Pawn(Chessman::color_ color) : Chessman(color, 'P') {}
 
 Chessman::Move_type Pawn::cell_access(const int &x_first, const int &y_first, const int &x_second, const int &y_second, std::array<std::array<Cell, 8>, 8> &board)
 {
-    // if (abs(x_first - x_second) == 2 && y_first - y_second == 0 && check_give_enpassant(x_first, y_first, x_second, y_second, board))
-    // {
-    //     return Move_type::Give_Enpassant;
-    // }
-
-    // if (can_enpassant && check_do_enpassant(x_first, y_first, x_second, y_second, board))
-    // {
-        
-    // }
-    
-    
     if (get_color() == color_::White)
     {
         if (x_first == 6)
