@@ -1,0 +1,27 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>Assets /Frame 6.png</file>
+        <file>LoginWindow.qml</file>
+        <file>Frame 22.png</file>
+        <file>Assets /Black/Frame 10.png</file>
+        <file>Assets /Black/Frame 11.png</file>
+        <file>Assets /Black/Frame 12.png</file>
+        <file>Assets /Black/Frame 13.png</file>
+        <file>Assets /Black/Frame 14.png</file>
+        <file>Assets /Black/Frame 15.png</file>
+        <file>Assets /White/Frame 16.png</file>
+        <file>Assets /White/Frame 17.png</file>
+        <file>Assets /White/Frame 18.png</file>
+        <file>Assets /White/Frame 19.png</file>
+        <file>Assets /White/Frame 20.png</file>
+        <file>Assets /White/Frame 21.png</file>
+        <file>Assets /Frame 2.png</file>
+        <file>Assets /Frame 3.png</file>
+        <file>Assets /Frame 4.png</file>
+        <file>Assets /Frame 5.png</file>
+        <file>Assets /Frame 7.png</file>
+        <file>Assets /Frame 8.png</file>
+        <file>CloseWindow.qml</file>
+    </qresource>
+</RCC>
